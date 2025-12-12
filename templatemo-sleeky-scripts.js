@@ -21,31 +21,31 @@ class VerticalCubeSlider {
         this.images = [
             {
                 url: 'access/unsplash-image-01.jpg',
-                thumb: 'images/unsplash-thumb-01.jpg',
+                thumb: 'access/unsplash-thumb-01.jpg',
                 title: 'Cuoi cap lop 9',
                 description: 'Hop anh em xa doan.'
             },
             {
                 url: 'access/unsplash-image-02.jpg',
-                thumb: 'images/unsplash-thumb-02.jpg',
+                thumb: 'access/unsplash-thumb-02.jpg',
                 title: 'My best friend',
                 description: 'Nguoi tinh khong chung giuong, chung goi'
             },
             {
                 url: 'access/unsplash-image-03.jpg',
-                thumb: 'images/unsplash-thumb-03.jpg',
+                thumb: 'access/unsplash-thumb-03.jpg',
                 title: 'Ngoai giao cac anh lon',
                 description: 'Di du lich TP.Quy nhon va Phu Yen'
             },
             {
                 url: 'access/unsplash-image-04.jpg',
-                thumb: 'images/unsplash-thumb-04.jpg',
+                thumb: 'access/unsplash-thumb-04.jpg',
                 title: 'Ngoai giao cac anh lon',
                 description: 'Checkin song ao tai Thap Nghinh Phong, Phu Yen.'
             },
             {
                 url: 'access/unsplash-image-05.jpg',
-                thumb: 'images/unsplash-thumb-05.jpg',
+                thumb: 'access/unsplash-thumb-05.jpg',
                 title: 'Tap the 12A2 Nguyen Thi Dieu',
                 description: 'Cuoc thi rung chuong vang 2025-2026.'
             }
