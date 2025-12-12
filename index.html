@@ -1,220 +1,346 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Design - Dark Theme</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .badge {
-            font-size: 1.1rem;
-        }
-    </style>
-    </head>
+    <title>QTann - Home</title>
+    <link rel="stylesheet" href="templatemo-sleeky-pro.css">
+<!-- TemplateMo 598 Sleeky Pro
+https://templatemo.com/tm-598-sleeky-pro
+-->
+</head>
 <body>
-
-    <nav class="navbar animated delay-1">
-        <div class="nav-logo">✦ Website Portfolio</div>
-        <ul class="nav-links">
-            <li><a href="#home">Trang chủ</a></li>
-            <li><a href="#about">Về bản thân</a></li>
-            <li><a href="#additional-skills">Kỹ năng</a></li>
-            <li><a href="#contact">Liên hệ</a></li>
-        </ul>
-        <a href="#contact" class="btn-nav">✨ Liên hệ với tôi</a>
-    </nav>
-
-    <section id="home">
-        <div class="glow-effect"></div>
-
-        <div class="hero-content">
-            <div class="badge animated delay-2">THPT Nguyễn Thị Diệu</div>
-            
-            <h1 class="animated delay-3">
-                Bao Nguyen Quy Tan, <br>
-                <span class="highlight">12A02</span>
-            </h1>
-            
-            <div class="hero-desc-container animated delay-4">
-                <p class="hero-desc">"Lực tài thành cơ nghiệp.</p>
-                <p class="hero-desc">Trí đức tác công danh!".</p>
-            </div>
-
-            <a href="#about" class="scroll-down-btn animated delay-5">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="#home" class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FF6B6B"/>
+                            <stop offset="100%" style="stop-color:#7FFFD4"/>
+                        </linearGradient>
+                    </defs>
+                    <circle cx="50" cy="50" r="45" fill="url(#logoGradient)" opacity="0.1"/>
+                    <path d="M20 60 L35 40 L50 55 L65 35 L80 50" stroke="url(#logoGradient)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="35" cy="40" r="3" fill="url(#logoGradient)"/>
+                    <circle cx="50" cy="55" r="3" fill="url(#logoGradient)"/>
+                    <circle cx="65" cy="35" r="3" fill="url(#logoGradient)"/>
+                    <rect x="25" y="65" width="50" height="15" rx="7" fill="url(#logoGradient)" opacity="0.3"/>
+                </svg>
+                <span class="logo-text">QTann</span>
             </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#timeline" class="nav-link"Timeline></a></li>
+                <li><a href="#contact" class="nav-link">Liên hệ</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Slider -->
+    <section id="home" class="hero">
+        <div class="slider-container">
+            <div class="progress-ring">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            
+            <div class="slider-stage" id="sliderStage"></div>
+            <!-- You can edit slider images in JS file -->
+            <!-- Edit templatemo-sleeky-scripts.js for image path / image filenames -->
+            <div class="text-overlay" id="textOverlay">
+                <h2 class="slide-title" id="slideTitle">Hop anh em xa doan</h2>
+                <p class="slide-description" id="slideDescription">Buffet cuối cấp lớp 9</p>
+            </div>
+            
+            <button class="nav-arrow prev" id="prevArrow" aria-label="Previous"></button>
+            <button class="nav-arrow next" id="nextArrow" aria-label="Next"></button>
+            
+            <div class="controls">
+                <button class="control-btn play-pause-btn" id="playPauseBtn" title="Play/Pause">
+                    <span class="play-icon"></span>
+                    <span class="pause-icon"></span>
+                </button>
+            </div>
+            
+            <div class="dots" id="dots"></div>
+            <div class="thumbnails-container" id="thumbnails"></div>
         </div>
     </section>
-    <section id="about">
-        <main class="container">
-            <div class="card profile-card animated">
-                <div class="profile-image-wrapper">
-                    <img src="access/avatar.jpg" alt="Profile" class="profile-img">
-                    <div class="status-badge">
-                        <span class="dot"></span> Đang hoạt động
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Về bản thân</h2>
+                <p class="section-subtitle">"Biển rộng vô biên, lấy kiên trì làm bến
+                mây xanh không lối, lấy chí cả dựng lên"</p>
+            </div>
+            
+            <div class="services-container">
+                <div class="services-tabs">
+                    <div class="service-tab active" data-service="photography">
+                        <span class="service-tab-icon">👤</span>
+                        <h3>Thông tin cá nhân</h3>
+                      
+                    </div>
+                    
+                    <div class="service-tab" data-service="expeditions">
+                        <span class="service-tab-icon">📚</span>
+                        <h3>Học vấn</h3>
+                     
+                    </div>
+                    
+                    <div class="service-tab" data-service="prints">
+                        <span class="service-tab-icon">🎨</span>
+                        <h3>Sở thích</h3>
+                
                     </div>
                 </div>
                 
-                <div class="profile-info">
-                    <h2>Yo, I'm QTann!</h2>
-                    <p class="role">1,2,3,5 anh có đánh rơi nhịp nào hong:3</p>
+                <div class="services-content">
+                    <div class="service-content active" id="photography">
+                        <div class="service-content-icon">😗</div>
+                        <h2>Thông tin cá nhân</h2>
+                        <p>Mình là Bảo Nguyễn Quý Tân. Mình đang sinh sống và học tập tại Thành phố Hồ Chí Minh hiện học lớp 12A2 tại trường THPT Nguyễn Thị Diệu.</p>
+                        <p>Về tính cách, mình tự thấy mình là một người khá hoạt bát, hoà đồng và cẩn thận, ham học hỏi. Mình luôn tin rằng phương châm sống như sự chủ động sẽ mang lại những cơ hội mới trong học tập cũng như các mối quan hệ tốt và mình luôn nỗ lực áp dụng điều đó trong học tập và cuộc sống.</p>
+                        <ul class="service-features">
+                            <li>Họ và tên: Bảo Nguyễn Quý Tân</li>
+                            <li>Ngày sinh: 11/03/2008</li>
+                            <li>Địa chỉ: Lê Văn Sỹ, P14, Quận 3, TP.HCM</li>
+                            <li>Hiện đang học: THPT Nguyễn Thị Diệu</li>
+                            <li>Lớp: 12A2 (Niên khoá:2025-2026)</li>
+                        </ul>
+                    </div>
                     
-                    <div class="social-icons">
-                        <a href="#" class="icon-box" aria-label="X (Twitter)">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                        </a>
-                        <a href="https://www.facebook.com/quy.tan.896207" class="icon-box" aria-label="Facebook">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                        </a>
-                        <a href="#" class="icon-box" aria-label="Instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                        </a>
+                    <div class="service-content" id="expeditions">
+                        <div class="service-content-icon">📚</div>
+                        <h2>Học vấn</h2>
+                        <p>Không có các thành tích xuất sắc nổi trội, mình là 1 học sinh bình thường trung bình khá và luôn cố gắng học hỏi nhất có thể để trau dồi, củng cố kiến thức, kỹ năng sống cho bản thân.</p>
+                        <p>Định hướng tương lai, aim 24+ điểm thi tốt nghiệp, đỗ trường đại học Sư phạm TP.HCM ngành Sư phạm Lý hoặc trường Đại học Công nghệ thông tin (UIT) ngành lập trình phần mềm hoặc thiết kế website.</p>
+                        <ul class="service-features">
+                            <li>4 năm học sinh giỏi cấp 2.</li>
+                            <li>Điểm thi tuyển sinh vào 10: 20,25đ.</li>
+                            <li>12 năm hạnh kiểm tốt cấp 3.</li>
+                            <li>Danh hiệu cháu ngoan Bác Hồ.</li>
+                            <li>Giải ba cuộc thi Casio máy tính cầm tay môn Vật lí 2025-2026</li>
+                        </ul>
                     </div>
-
-                    <a href="#contact" class="btn-primary">Kết nối với tôi</a>
-                </div>
-            </div>
-
-            <div class="card details-card animated delay-1">
-                <div class="bio-section">
-                    <p>"Lắng nghe thế giới bằng tai của một nhạc sĩ, quan sát bằng mắt của nhiếp ảnh gia, và tái tạo lại tất cả bằng tư duy của một lập trình viên"</p>
-                    <p>Không chỉ dừng lại ở vai trò của một người học, tôi xem mình là người kiến tạo tương lai cho chính mình. Tôi tin rằng sức mạnh của sáng tạo là vô tận; mỗi dự án, con đường giống như một cánh cửa mới, nơi tôi có thể khai mở những năng lực tiềm ẩn, thử thách giới hạn của bản thân và tiến gần hơn tới sự hoàn mỹ cũng như những giá trị phát triển bền vững.</p>
-                </div>
-
-                <div class="tags-container">
-                    <span class="tag">Thân thiện</span>
-                    <span class="tag">Hòa đồng</span>
-                    <span class="tag">Tâm huyết</span>
-                    <span class="tag">Chính trực</span>
-                    <span class="tag">Kỷ luật</span>
-                </div>
-
-                <hr class="divider">
-                <div class="experience-list">
-                    <div class="exp-item">
-                        <span class="exp-role">Sinh sống</span>
-                        <span class="exp-company">TP.HCM</span>
-                        <span class="exp-year">2008</span>
+                    
+                    <div class="service-content" id="prints">
+                        <div class="service-content-icon">🎨</div>
+                        <h2>Sở thích</h2>
+                        <p>Mình thích làm nhạc mỗi khi rảnh rỗi, sử dụng phần mềm FL Studio và tạo ra các bài nhạc mình có thể làm được như Vinahouse, Houselak, Deephouse, Vinatrance,...
+                        Lúc tập tễnh vào thị trường âm nhạc, kiến thức chưa vững sâu, mình đã hit 2 bài trong vài tháng đầu tự học hỏi như: Là em ngộ nhận (T8/2024), Em nào có tội (T9-2024) - QTann Remix với tổng lượt view YouTube là 800K views và hơn 30K video sử dụng link nhạc ở nền tảng TikTok. (Giờ mình nghe lại thấy nó không hay chẳng hiểu sao thời đó lại nổi:)))</p>
+                        <p>Mình cũng thích chụp ảnh ngẫu hứng, mặc dù điện thoại không phải mẫu flagship cao cấp, mình thường chụp biển, bầu trời, toà cao ốc...</p>
+                        <ul class="service-features">
+                            <li>Music Producer / Dj</li>
+                            <li>Photographer</li>
+             
+                        </ul>
                     </div>
-                    <div class="exp-item">
-                        <span class="exp-role">Trường tiểu học</span>
-                        <span class="exp-company">Trần Quốc Thảo</span>
-                        <span class="exp-year">2014</span>
-                    </div>
-                    <div class="exp-item">
-                        <span class="exp-role">Trường THCS </span>
-                        <span class="exp-company">Colette</span>
-                        <span class="exp-year">2019</span>
-                    </div>
-                    <div class="exp-item">
-                        <span class="exp-role">Trường THPT</span>
-                        <span class="exp-company">Nguyễn Thị Diệu</span>
-                        <span class="exp-year">2023 </span>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </section>
-
-    <section id="skill" class="skill-section animated">
-        <h2 class="section-title animated"> Về bản thân</h2>
-        <div class="skill-grid container">
-            <div class="skill-card card animated delay-1">
-                <h3>Học vấn</h3>
-                <div class="skill-list">
-                    <p>Đạt 11 năm có Hạnh kiểm Tốt.</p>
-                    <p>Đạt 9 năm danh hiệu Học sinh Khá</p>
-                    <p>Tham gia phong trào, thi đua tích cực.</p>
-                    <p>Đạt danh hiệu Cháu ngoan Bác Hồ.</p>
-                </div>
-            </div>
-            <div class="skill-card card animated delay-3">
-                <h3>Sở thích</h3>
-                <div class="skill-list">
-                    <p>Đam mê Vật lí và Bóng đá.</p>
-                    <p>Đam mê láp ráp linh kiện điện tử.</p>
-                    <p>Thích làm nhạc, chụp ảnh, dạo phố.</p>
-                    <p>Ước mơ làm Giáo viên Vật lí.</p>
-                </div>
-            </div>
-            <div class="skill-card card animated delay-2">
-                <h3>Kỹ năng Mềm</h3>
-                <div class="skill-list">
-                    <p>Làm việc nhóm linh hoạt, hiệu quả.</p>
-                    <p>Có khả năng tự học tốt, tính kỷ luật cao.</p>
-                    <p>Khả năng giao tiếp tốt, ứng xử lịch sự.</p>
-                    <p>Tính cách thân thiện, liêm khiết.</p>
                 </div>
             </div>
         </div>
     </section>
-    <section id="additional-skills" class="skill-section animated">
-        <h2 class="section-title animated">Kỹ năng cốt lõi</h2>
-        <div class="skill-grid container">
-            <div class="skill-card card animated delay-1">
-                <div class="skill-icon"></div>
-                <h3>Music Producer</h3>
-                <div class="skill-list">
-                    <p>Thành thạo các thể loại nhạc Vinahouse, Deephouse, Houselak, Vinatrance,...</p>
-                    <p>Kiến thức cơ bản về nhạc lí, sử dụng cơ bản nhạc cụ Piano, Drums, Sáo.</p>
-                    <p>Sử dụng thành thạo các VST-plugins, phần mềm làm nhạc Fl Studio.</p>
-                </div>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Lịch sử bản thân và định hướng tương lai gần</h2>
+                <p class="section-subtitle">Luôn học hỏi và cố gắng phát triển, tự tạo lối đi riêng không đi theo lối mòn.</p>
             </div>
-            <div class="skill-card card animated delay-3">
-                <div class="skill-icon"></div>
-                <h3>Front-end Developer</h3>
-                <div class="skill-list">
-                    <p>Làm quen cơ bản HTML, CSS, JavaScript và đang học React, Vue.</p>
-                    <p>Sử dụng cơ bản phần mềm lập trình Visual Code Studio và Plugins hỗ trợ.</p>
-                    <p>Có kinh nghiệm sử dụng Trí tuệ nhân tạo (AI) hỗ trợ mục đích học tập, công việc.</p>
-                </div>
-            </div>
-            <div class="skill-card card animated delay-2">
-                <div class="skill-icon"></div>
-                <h3>Photographer</h3>
-                <div class="skill-list">
-                    <p>Sử dụng cơ bản máy ảnh DSLR, phần mềm chỉnh sửa Photoshop, Lightroom.</p>
-                    <p>Nắm vững các nguyên lý nhiếp ảnh căn bản (Iso, Khẩu độ, DoF).</p>
-                    <p>Cơ bản quy trình xử lý ảnh RAW, Color Grading để tạo mood cho bức ảnh.</p>
-                </div>
-            </div>
-        </div>
-        <a href="#contact" class="btn-primary skill-cta animated">Kết nối với tôi</a>
-    </section>
-    <section id="contact" class="contact-section animated">
-        <h2 class="section-title animated">Liên hệ với tôi</h2>
-        <div class="card contact-card animated delay-1">
-            <form action="#" method="POST" class="contact-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Họ và tên</label>
-                        <input type="text" id="name" name="name" placeholder="Nguyễn Văn A" required>
+            
+            <div class="about-grid">
+                <div class="about-timeline">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2014</div>
+                        <div class="timeline-title">Học tại trường Tiểu học Trần Quốc Thảo</div>
+                        <div class="timeline-description">Thuở đó trường mang danh tiếng tốt đi kèm chất lượng, được học hỏi các đạo đức, phẩm chất được thầy cô tận tình chỉ dạy, cũng như cơ sở vật chất tốt khiến trải nghiệm học cũng như tuổi thơ tại trường không thể quên, đặc biệt là lửa trại, các hoạt động vua Hùng, chú Cuội, các tập vợt PCCC.</div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Gmail</label>
-                        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2019</div>
+                        <div class="timeline-title">Học trường Trung học cơ sở Colette</div>
+                        <div class="timeline-description">Kết nạp được nhiều bạn bè, ngoại giao mạnh nhất lớp 9, thầy cô dạy tận tình cũng như giáo viên chủ nhiệm năm cuối, chỉ bảo khuyên đặt nguyện vọng tuyển sinh kỹ càng, kẻo sau này tiếc nuối.
+                        Chuyện là bản thân lúc đó ảo thành tích, nghĩ 9,10 trên lớp sẽ thi tuyển sinh dễ dàng, đặt nv1 Nguyễn Thị Minh Khai, nv2 Marie Curie, nv3 Nguyễn Thị Diệu. Và mình đã thi được 20,25 ._. , trượt 2 nv, trong khi Marie Curie nv1 lấy 20đ, lúc đó mình tiếc nuối và hối hận lắm.</div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-title">Học tại trường THPT Nguyễn Thị Diệu</div>
+                        <div class="timeline-description">Sau khi tiếc nuối về sự ngu dốt, kiêu ngạo, đến nay thì đã hoàn toàn không nuối tiếc và bước đi tiếp trên con đường tương lai, tại trường này, giáo viên Nguyễn Vũ Trường dạy môn Vật lý, là người truyền cảm hứng để em bất chợt thi vào Sư phạm Lý. Cũng như có rất nhiều kỷ niệm nơi đây và 1 cô gái khác lớp:).</div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2026</div>
+                        <div class="timeline-title">Đỗ đại học aim 25+</div>
+                        <div class="timeline-description">Đậu trường Đại học Sư phạm TP.HCM ngành Sư phạm Lý hoặc trường Đại học Công Nghệ Thông Tin (UIT)</div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="message">Nội dung</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Nội dung bạn muốn gửi đến tôi..." required></textarea>
+                
+                <div class="about-tech">
+                    <div class="tech-card">
+                        <div class="tech-icon">🤝</div>
+                        <div class="tech-title">Khả năng làm việc nhóm</div>
+                    </div>
+                    
+                    <div class="tech-card">
+                        <div class="tech-icon">🛰️</div>
+                        <div class="tech-title">Thích tò mò về Vật lý hiện thực, công nghệ</div>
+                      
+                    </div>
+                    
+                    <div class="tech-card">
+                        <div class="tech-icon">🎯</div>
+                        <div class="tech-title">Luôn đề ra mục tiêu rõ ràng và trách nhiệm kỷ luật nghiêm khắc</div>
+                    </div>
                 </div>
-                <button type="submit" class="btn-primary">Gửi</button>
-            </form>
+            </div>
+
+            <div class="stats-futuristic">
+                <div class="stat-futuristic">
+                    <h4>20,25đ</h4>
+                    <p>Tuyển sinh 10</p>
+                </div>
+                <div class="stat-futuristic">
+                    <h4>25+</h4>
+                    <p>Tốt nghiệp THPT</p>
+                </div>
+              
+                
+                
+                         
+                         
         </div>
     </section>
 
-    <footer class="footer animated">
-        <div class="nav-logo" style="margin-bottom: 20px; font-size: 1.5rem;">✦ QTann</div>
-        <ul class="nav-links" style="display: flex; justify-content: center; margin-bottom: 30px;">
-            <li><a href="#home">Trang chủ</a></li>
-            <li><a href="#about">Về bản thân</a></li>
-            <li><a href="#additional-skills">Kỹ năng</a></li>
-            <li><a href="#contact">Liên hệ</a></li>
-        </ul>
-        <p>&copy; 2025 Bao Nguyen Quy Tan. All Rights Reserved.</p>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Liên hệ</h2>
+                <p class="section-subtitle"></p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Họ và tên</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Nội dung Chính</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Tin nhắn</label>
+                            <textarea id="message" name="message" placeholder="Hãy viết vấn đề cần giúp của bạn..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Gửi tin nhắn</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Địa chỉ</h4>
+                            <p>Lê Văn Sỹ, Phường 14, Quận 3, TP.HCM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h4>Điện thoại:</h4>
+                            <p>0395911341</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h4>Email:</h4>
+                            <p>ngtann110328@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#FF6B6B"/>
+                                    <stop offset="100%" style="stop-color:#7FFFD4"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="50" cy="50" r="45" fill="url(#footerLogoGradient)" opacity="0.1"/>
+                            <path d="M20 60 L35 40 L50 55 L65 35 L80 50" stroke="url(#footerLogoGradient)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="35" cy="40" r="3" fill="url(#footerLogoGradient)"/>
+                            <circle cx="50" cy="55" r="3" fill="url(#footerLogoGradient)"/>
+                            <circle cx="65" cy="35" r="3" fill="url(#footerLogoGradient)"/>
+                            <rect x="25" y="65" width="50" height="15" rx="7" fill="url(#footerLogoGradient)" opacity="0.3"/>
+                        </svg>
+                        <span class="footer-logo-text">QTann</span>
+                    </div>
+
+                    <div class="footer-social">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">💼</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Menu</h4>
+                    <div class="footer-links">
+                        <a href="#home" class="footer-link">Home</a>
+                        <a href="#about" class="footer-link">About</a>
+                        <a href="#timeline" class="footer-link">Timeline</a>
+                        <a href="#contact" class="footer-link">Contact</a>
+                  
+                    </div>
+                </div>
+                <p>Bao Nguyen Quy Tan - Website Portfolio</p>
+              
+            </div>
+        </div>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="templatemo-sleeky-scripts.js"></script>
 </body>
 </html>
